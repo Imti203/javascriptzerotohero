@@ -1,27 +1,29 @@
-// values and variables
 
+               // Data Type//
 
-let js="amazing";
-console.log(js);
+// boolean
+let javascriptIsFun = true;
+console.log(javascriptIsFun);
 
-console.log(40 + 8 + 23 - 10);
-console.log("jonas");
-console.log(23);
+console.log(typeof true);
+console.log(typeof javascriptIsFun);
 
-let firstName = "Matilada";
+// number and string
+console.log(typeof 23);
+console.log(typeof 'jishan');
 
-console.log(firstName);
-console.log(firstName);
-console.log(firstName);
+// boolean to string
+javascriptIsFun = 'YES!'; // don't use 'let' when we use same variable for the next times.
+console.log(typeof javascriptIsFun);
 
-let jonas_matilada = "JM";
-let $function = 27;
+// undefined
+let year;
+console.log(year);
+console.log(typeof year);
 
-let person = "jonas";
-let PI =3.1416;
+//number
+year= 1991;
+console.log(typeof year);
 
-let myFirstJob = "Programmer";
-let myCurrentJob = "Teacher";
-
-let job1 = "Programmer";
-let job2 = "Teacher";
+// null
+console.log(typeof null);
