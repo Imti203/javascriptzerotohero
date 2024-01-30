@@ -1,29 +1,18 @@
 
-               // Data Type//
+       // let , const , var //
 
-// boolean
-let javascriptIsFun = true;
-console.log(javascriptIsFun);
 
-console.log(typeof true);
-console.log(typeof javascriptIsFun);
+let age = 30;
+age = 31;
+console.log(age);
 
-// number and string
-console.log(typeof 23);
-console.log(typeof 'jishan');
+const birthYear = 1991;
+//birthYear = 1990;  it doesn't work because of without const thae variables doesn't work.
+//const job;   without values const doesn't work.
 
-// boolean to string
-javascriptIsFun = 'YES!'; // don't use 'let' when we use same variable for the next times.
-console.log(typeof javascriptIsFun);
+var job= 'Programmer';
+job = 'teacher';
+console.log(job); // we never use var although 'var' ande 'let' are same but not always .var is old.
 
-// undefined
-let year;
-console.log(year);
-console.log(typeof year);
-
-//number
-year= 1991;
-console.log(typeof year);
-
-// null
-console.log(typeof null);
+lastName = 'pasha';
+console.log(lastName); // but we never write like this ;
