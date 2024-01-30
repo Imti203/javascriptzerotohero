@@ -1,18 +1,34 @@
 
-       // let , const , var //
 
+    //   Basic Operators//
 
-let age = 30;
-age = 31;
-console.log(age);
+// Math Operators
+const now = 2037;
+const ageJonas = now - 1991;
+const ageSarah = now - 2018;
+console.log(ageJonas, ageSarah);
 
-const birthYear = 1991;
-//birthYear = 1990;  it doesn't work because of without const thae variables doesn't work.
-//const job;   without values const doesn't work.
+console.log(ageJonas * 2, ageSarah / 10, 2 ** 3);
+// 2 ** 3 means 2 to the power of 3 = 2 * 2 * 2
 
-var job= 'Programmer';
-job = 'teacher';
-console.log(job); // we never use var although 'var' ande 'let' are same but not always .var is old.
+const firstName = 'Javascript';
+const lastName = 'Fundamentals';
+console.log(firstName + ' ' + lastName);
 
-lastName = 'pasha';
-console.log(lastName); // but we never write like this ;
+// Assignment operators
+  let x =10+5;  // 15
+  x += 10 ; // x = x + 10 = 25
+  x*=4 ; // x = x * 4 = 100
+  x++ ; // x = x + 1
+  x-- ; // x = x - 1
+  x-- ; // x = x - 1
+  console.log(x);
+
+// Comparison Operators
+console.log(ageJonas > ageSarah); // >, <, >=, <=
+console.log(ageSarah >= 18);
+
+const isFullAge = ageSarah <= 18;
+console.log(isFullAge);
+
+console.log(now - 1991 > now - 2018);
