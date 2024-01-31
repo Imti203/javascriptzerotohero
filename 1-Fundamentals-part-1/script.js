@@ -172,7 +172,7 @@ const BMIJohnV= massJohnV / (heightJohnV * heightJohnV );
 const markHigherBMIV = BMIMarkV > BMIJohnV ;
 
 console.log(BMIMarkV, BMIJohnV, markHigherBMIV);
-*/
+
 
            //  Strings and Templet literals//
 
@@ -194,3 +194,23 @@ console.log('String with \n\ multiple \n\ lines');
 console.log(`String with
  multiple
   lines`);
+  */
+
+          // Taking decisions if else statements//
+          
+const age = 15;
+if (age>=18) {
+  console.log (`Sarah can strat driving license.`);
+} else {
+  const yearLeft = 18 - age;
+  console.log(`Sarah is too young.Wait another ${yearLeft} years :)`);
+}
+
+const birthYear = 1998;
+let century;
+if (birthYear <= 2000) {
+  century = 20;
+}else {
+  century = 21;
+}
+console.log(century);
