@@ -1,26 +1,29 @@
 
+// Basic Boolean Logic:The AND, OR & NOT Operators//
 
-                // Equality Operators == vs ===
+// A(false) AND(&&) B(true) = false  true when all are true
+// A(false) OR(||) B(true) = true  true when one is true
+// A(false) NOT(!) B(true) = false  A is false
 
-const age = '18';
-if (age === 18) console.log('You just became an adult :D (strict)'); // '18' not equal 18
+const hasDriversLicense = true; // A
+const hasGoodVision = true; // B
 
-if (age == 18) console.log('You just became an adult :D (loose)');// '18' = 18
+console.log(hasDriversLicense && hasGoodVision);
+console.log(hasDriversLicense || hasGoodVision);
+console.log(!hasDriversLicense);
 
-const luckyNumber = prompt("What's your favourite number");
-console.log(luckyNumber);
-console.log(typeof luckyNumber);
-
-const favourite = Number(prompt("What's your favourite number"));
-console.log(favourite);
-console.log(typeof favourite);
-if (favourite === 23) {
-  console.log(`Cool! 23 is an amazing number`);
-}else if (favourite === 9) {
-  console.log(`9 is also a cool number`);
-}else if (favourite === 7) {
-  console.log(`7 is also a cool number`);
+if (hasDriversLicense && hasGoodVision) {
+  console.log(`Sarah is able to drive`);
 }else {
-  console.log(`Number is not 23 or 7 or 9`);
+  console.log(`Someone else should drive..`);
 }
-if (favourite !== 23) console.log('why not 23?');
+
+const isTired = false; // C
+
+console.log(hasDriversLicense && hasGoodVision && !isTired);
+
+if (hasDriversLicense && hasGoodVision && !isTired) {
+  console.log(`Sarah is able to drive`);
+}else {
+  console.log(`Someone else should drive..`);
+}
