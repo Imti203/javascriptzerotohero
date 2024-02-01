@@ -1,29 +1,75 @@
 
-// Basic Boolean Logic:The AND, OR & NOT Operators//
 
-// A(false) AND(&&) B(true) = false  true when all are true
-// A(false) OR(||) B(true) = true  true when one is true
-// A(false) NOT(!) B(true) = false  A is false
+       // Coding challenge #3
 
-const hasDriversLicense = true; // A
-const hasGoodVision = true; // B
+/*
+There are two gymnastics teams, Dolphins and Koalas. They compete against each other 3 times. The winner with the highest average score wins the a trophy!
 
-console.log(hasDriversLicense && hasGoodVision);
-console.log(hasDriversLicense || hasGoodVision);
-console.log(!hasDriversLicense);
+1. Calculate the average score for each team, using the test data below
+2. Compare the team's average scores to determine the winner of the competition, and print it to the console. Don't forget that there can be a draw, so test for that as well (draw means they have the same average score).
 
-if (hasDriversLicense && hasGoodVision) {
-  console.log(`Sarah is able to drive`);
-}else {
-  console.log(`Someone else should drive..`);
+3. BONUS 1: Include a requirement for a minimum score of 100. With this rule, a team only wins if it has a higher score than the other team, and the same time a score of at least 100 points. HINT: Use a logical operator to test for minimum score, as well as multiple else-if blocks 😉
+4. BONUS 2: Minimum score also applies to a draw! So a draw only happens when both teams have the same score and both have a score greater or equal 100 points. Otherwise, no team wins the trophy.
+
+TEST DATA: Dolphins score 96, 108 and 89. Koalas score 88, 91 and 110
+TEST DATA BONUS 1: Catss score 97, 112 and 101. Dogs score 109, 95 and 123
+TEST DATA BONUS 2: Birds score 97, 112 and 101. fishes score 109, 95 and 106
+
+GOOD LUCK 😀
+*/
+// 1
+const scoreDolphins = (96 + 108 + 89)/3;
+const scoreKoalas = (88 + 91 + 110)/3;
+console.log(scoreDolphins, scoreKoalas);
+
+// 2
+if (scoreDolphins > scoreKoalas) {
+  console.log(`Dolphins win the trophy`);
+}else if (scoreKoalas > scoreDolphins) {
+  console.log(`Koalas win the trophy`);
+}else if (scoreDolphins === scoreKoalas) {
+  console.log(`Both win the trophy`);
 }
 
-const isTired = false; // C
+// 3
+const scoreCats = (97 + 112 + 101)/3;
+const scoreDogs = (109 + 95 + 123)/3;
+console.log(scoreCats, scoreDogs);
 
-console.log(hasDriversLicense && hasGoodVision && !isTired);
+if (scoreCats > scoreDogs && scoreCats >= 100) {
+  console.log(`Cats win the trophy`);
+}else if (scoreDogs > scoreCats) {
+  console.log(`Dogs win the trophy`);
+}else if (scoreCats === scoreDogs) {
+  console.log(`Both win the trophy`);
+}
 
-if (hasDriversLicense && hasGoodVision && !isTired) {
-  console.log(`Sarah is able to drive`);
+// extra
+const scoreCatsDraw = (97 + 112 + 80)/3;
+const scoreDogsDraw = (109 + 95 + 50)/3;
+console.log(scoreCatsDraw, scoreDogsDraw);
+
+if (scoreCatsDraw > scoreDogsDraw && scoreCatsDraw >= 100) {
+  console.log(`Cats win the trophy`);
+}else if (scoreDogsDraw > scoreCatsDraw) {
+  console.log(`Dogs win the trophy`);
+}else if (scoreCatsDraw === scoreDogsDraw && scoreCatsDraw >=100 && scoreDogsDraw >= 100) {
+  console.log(`Both win the trophy`);
 }else {
-  console.log(`Someone else should drive..`);
+  console.log(`No one wins the trophy`);
+}
+
+// 4
+const scoreBirds = (97 + 112 + 101)/3;
+const scoreFishes = (109 + 95 + 106)/3;
+console.log(scoreBirds, scoreFishes);
+
+if (scoreBirds > scoreFishes && scoreBirds >= 100) {
+  console.log(`Birds win the trophy`);
+}else if (scoreFishes > scoreBirds) {
+  console.log(`Fishes win the trophy`);
+}else if (scoreBirds === scoreFishes && scoreBirds >=100 && scoreFishes >= 100) {
+  console.log(`Both win the trophy`);
+}else {
+  console.log(`No one wins the trophy`);
 }
