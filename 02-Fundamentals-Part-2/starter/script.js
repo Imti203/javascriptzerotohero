@@ -7,7 +7,7 @@ const passTest = true ;
 
 if (passTest) hasDriversLicense = true;
 if (hasDriversLicense) console.log('I can drive :D');
-*/
+
 
 // Functions
 
@@ -31,3 +31,18 @@ console.log(fruitProcessor(5, 0));
 
 const appleOrangeJuice = fruitProcessor(2, 4);
 console.log(appleOrangeJuice);
+*/
+
+// Function Declaration 
+
+function calcAge(birthYear) {
+    return 2024 - birthYear;
+}
+const age1 = calcAge(1993);
+
+// Function Expression
+const clacAge2 = function(birthYear) {
+    return 2030 - birthYear ;
+}
+const age2 = clacAge2(1993);
+console.log(age1, age2);
