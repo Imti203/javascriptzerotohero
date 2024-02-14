@@ -46,7 +46,7 @@ const clacAge2 = function(birthYear) {
 }
 const age2 = clacAge2(1993);
 console.log(age1, age2);
-*/
+
 
 // Arrow function
 
@@ -63,3 +63,18 @@ const yearsUntilRetirement = (birthYear, firstName) => {
 
 console.log(yearsUntilRetirement(1991, 'Emtiaz'));
 console.log(yearsUntilRetirement(1981, 'Shakil'));
+*/
+
+// Functions calling other function
+function cutFruitPieces(fruit) {
+    return fruit * 4;
+}
+
+function fruitProcessor(apples, oranges) {
+    const applePieces = cutFruitPieces(apples);
+    const orangePieces = cutFruitPieces(oranges);
+
+    const juice = `juice with ${applePieces} pieces of apple ${orangePieces} pieces of orange.`
+    return juice;
+}
+console.log(fruitProcessor(2, 3));
