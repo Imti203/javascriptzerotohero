@@ -269,14 +269,30 @@ GOOD LUCK 😀
 // Introduction to Objects
 ///////////////////////////////////////////////////////////////////////
 
-const jonasArray = [
-    'Jonas',
-    'Ray',
-    2038 - 1991,
-    'teacher',
-    ['Micheal', 'Peter', 'Steven']
-];
-console.log(jonasArray);
+// const jonasArray = [
+//     'Jonas',
+//     'Ray',
+//     2038 - 1991,
+//     'teacher',
+//     ['Micheal', 'Peter', 'Steven']
+// ];
+// console.log(jonasArray);
+
+// const jonas = {
+//     firstName: 'Jonas',
+//     lastName: 'Ray',
+//     age: 2038 - 1991,
+//     job: 'teacher',
+//     friends: ['Micheal', 'Peter', 'Steven']
+// };
+// console.log(jonas);
+
+
+//////////////////////////////////////////////////////////////////////
+//  Dot vs Bracket Notation
+///////////////////////////////////////////////////////////////////////
+
+
 
 const jonas = {
     firstName: 'Jonas',
@@ -286,3 +302,51 @@ const jonas = {
     friends: ['Micheal', 'Peter', 'Steven']
 };
 console.log(jonas);
+
+console.log(jonas.lastName);
+console.log(jonas['lastName']);
+
+console.log(jonas.firstName);
+console.log(jonas['firstName']);
+
+const nameKey = 'Name';
+console.log(jonas['first' + nameKey]);
+console.log(jonas['last' + nameKey]);
+
+
+const aboutJonas = prompt('what do you want to know about jonas? Choose between firstName, lastName, age, job, location,  twitter and friends');
+console.log(aboutJonas);
+console.log(jonas.aboutJonas);
+console.log(jonas[aboutJonas]);
+
+if (jonas[aboutJonas]) {
+    console.log(jonas[aboutJonas]);
+} else {
+    console.log('Wrong request! Choose between firstName, lastName, age, job and friends')
+}
+
+jonas.location = 'Portugal';
+jonas['twitter'] = '@jdlsaadjdlj';
+console.log(jonas);
+
+// //challenge
+// //"Jonas has 3 friends, and his best friend is called Micheal"
+
+console.log(`${jonas.firstName} has ${jonas.friends.length} friends and his best friend is called ${jonas.friends[0]}`);
+
+const person = {
+    personName: 'Jonas',
+    friendsNumber: 3 ,
+    bestFriend: 'Micheal',
+};
+console.log(person);
+
+const personDetails = prompt('what do you want to know about jonas? Choose between  personName, friendsNumber, bestFriend');
+
+
+if (person[personDetails]) {
+    console.log(person[personDetails]);
+} else {
+    console.log('Wrong request! Choose between  personName, friendsNumber, bestFriends')
+};
+
