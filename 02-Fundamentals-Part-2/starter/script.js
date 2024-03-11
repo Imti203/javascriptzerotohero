@@ -485,16 +485,72 @@ GOOD LUCK 😀
 //  Iteration The FOR LOOP
 ///////////////////////////////////////////////////////////////////////
 
-console.log(`Lifting weights repetition 1 `);
-console.log(`Lifting weights repetition 2 `);
-console.log(`Lifting weights repetition 3 `);
-console.log(`Lifting weights repetition 4 `);
-console.log(`Lifting weights repetition 5 `);
-console.log(`Lifting weights repetition 6 `);
-console.log(`Lifting weights repetition 7 `);
-console.log(`Lifting weights repetition 9 `);
-console.log(`Lifting weights repetition 10 `);
+// console.log(`Lifting weights repetition 1 `);
+// console.log(`Lifting weights repetition 2 `);
+// console.log(`Lifting weights repetition 3 `);
+// console.log(`Lifting weights repetition 4 `);
+// console.log(`Lifting weights repetition 5 `);
+// console.log(`Lifting weights repetition 6 `);
+// console.log(`Lifting weights repetition 7 `);
+// console.log(`Lifting weights repetition 9 `);
+// console.log(`Lifting weights repetition 10 `);
 
-for(let rap = 1; rap <= 10; rap++) {
-    console.log(`Lifting weights repetition ${rap}`);
+
+// // for loop keeps running while condition is TRUE
+// for(let rap = 1; rap <= 10; rap++) {
+//     console.log(`Lifting weights repetition ${rap}`);
+// }
+
+/////////////////////////////////////////////////////////////////////
+//  Looping Backward Array, Breaking and Continuing
+///////////////////////////////////////////////////////////////////////
+
+const jonas = [
+        'Jonas',
+        'Ray',
+        2038 - 1991,
+        'teacher',
+        ['Micheal', 'Peter', 'Steven'],
+        true
+    ];
+    const types = [];
+
+    for( let i = 0; i < 5; i++ ) {
+        console.log(jonas[i]);
+    }
+
+    for( let i = 0; i < jonas.length; i++ ) {
+        // Reading types array 
+        console.log(jonas[i], typeof jonas[i]);
+
+        // Filling types Array 
+        types.push(typeof jonas[i]); 
+    }
+    console.log(types);
+
+
+const years = [1991, 2007, 1969, 2020];
+const ages= [];
+
+for (let i = 0; i < years.length; i++) {
+    ages.push (2037 - years[i]);
 }
+console.log(ages);
+
+// Breaking and Continuing
+console.log('---ONLY STRINGS---');
+for( let i =0; i < jonas.length; i++) {
+    if (typeof jonas[i] !== 'string') continue;
+
+    console.log(jonas[i], typeof jonas[i]);
+}
+
+console.log('---Break with Number---');
+for( let i =0; i < jonas.length; i++) {
+    if (typeof jonas[i] === 'number') break;
+
+    console.log(jonas[i], typeof jonas[i]);
+}
+
+
+
