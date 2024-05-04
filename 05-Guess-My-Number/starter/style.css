@@ -117,3 +117,47 @@ h1 {
 .label-score {
   margin-bottom: 2rem;
 }
+
+
+/* Add this media query for smaller screens (e.g., mobile devices) */
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 50%; /* Adjust font size for smaller screens */
+  }
+
+  header {
+    height: 25vh; /* Reduce header height for smaller screens */
+    border-bottom: 5px solid #eee; /* Adjust border thickness for smaller screens */
+  }
+
+  main {
+    height: 75vh; /* Increase main height for smaller screens */
+    flex-direction: column; /* Stack elements vertically for smaller screens */
+    justify-content: space-evenly; /* Adjust spacing between elements for smaller screens */
+  }
+
+  .left,
+  .right {
+    width: 90%; /* Adjust section width for smaller screens */
+    font-size: 1.8rem; /* Reduce font size for smaller screens */
+    text-align: center; /* Center align text for smaller screens */
+  }
+
+  .number {
+    font-size: 4rem; /* Reduce number font size for smaller screens */
+    width: 60%; /* Adjust number width for smaller screens */
+    padding: 2rem 0; /* Adjust number padding for smaller screens */
+  }
+
+  .guess {
+    font-size: 3rem; /* Reduce guess font size for smaller screens */
+    width: 80%; /* Adjust guess width for smaller screens */
+    padding: 1.5rem; /* Adjust guess padding for smaller screens */
+  }
+
+  .btn {
+    font-size: 1.8rem; /* Reduce button font size for smaller screens */
+    padding: 1.5rem 2rem; /* Adjust button padding for smaller screens */
+    margin-bottom: 2rem; /* Add spacing between buttons for smaller screens */
+  }
+}

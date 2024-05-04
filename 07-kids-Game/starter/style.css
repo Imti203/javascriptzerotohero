@@ -169,3 +169,106 @@ main {
 .hidden {
   display: none;
 }
+
+/* Add this media query for smaller screens (e.g., mobile devices) */
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 50%; /* Adjust font size for smaller screens */
+  }
+
+  body {
+    align-items: flex-start; /* Align content to the start for smaller screens */
+  }
+
+  main {
+    width: 90%; /* Adjust main container width for smaller screens */
+    height: auto; /* Allow main container height to adjust for smaller screens */
+    flex-direction: column; /* Stack players vertically for smaller screens */
+    position: relative;
+  }
+
+  .player {
+    padding: 5rem; /* Reduce padding for smaller screens */
+    text-align: center; /* Center align player content */
+  }
+
+  .score {
+    font-size: 6rem; /* Reduce score font size for smaller screens */
+  }
+
+  .current {
+    width: 80%; /* Adjust current score container width for smaller screens */
+  }
+
+  .dice {
+  position: absolute;
+  left: 50%;
+  top: 31.5rem; /* Adjust dice position for smaller screens */
+  }
+
+  .btn--new,
+  .btn--roll,
+  .btn--hold {
+    width: 100%; /* Make buttons full-width for smaller screens */
+    font-size: 1.5rem; /* Reduce button font size for smaller screens */
+    padding: 1rem 2rem; /* Adjust button padding for smaller screens */
+    top: auto; /* Remove top positioning for buttons */
+    position: relative; /* Reset button positioning */
+    margin-bottom: 1rem; /* Add some spacing between buttons */
+  }
+}
+
+
+/* Add this media query for smaller screens (e.g., mobile devices with a width of 360px) */
+@media only screen and (max-width: 360px) {
+  html {
+    font-size: 50%; /* Adjust font size for smaller screens */
+  }
+
+  main {
+    width: 90%; /* Adjust main container width for smaller screens */
+    height: auto; /* Allow main container height to adjust for smaller screens */
+    padding: 2rem; /* Add padding to main container for spacing */
+  }
+
+  .player {
+    padding: 4rem 2rem; /* Adjust padding for player sections */
+  }
+
+  .score {
+    font-size: 6rem; /* Reduce score font size for smaller screens */
+  }
+
+  .current {
+    width: 80%; /* Adjust current score container width for smaller screens */
+  }
+
+  .btn {
+    font-size: 1.5rem; /* Adjust button font size for smaller screens */
+    padding: 1rem 2rem; /* Adjust button padding for smaller screens */
+  }
+
+  .dice {
+    position: absolute;
+    left: 50%;
+    top: 20.5rem; /* Adjust dice position for smaller screens */
+    height: 8rem; /* Reduce dice height for smaller screens */
+  }
+
+  .btn--new,
+  .btn--roll,
+  .btn--hold {
+    width: 100%; /* Make buttons full-width for smaller screens */
+    margin-bottom: 1rem; /* Add spacing between buttons */
+  }
+
+  .btn--new {
+    top: 2rem; /* Adjust new game button position */
+  }
+  .btn--roll {
+    top: 34rem; /* Adjust roll dice button position */
+  }
+  .btn--hold {
+    top: 40rem; /* Adjust hold button position */
+  }
+}
