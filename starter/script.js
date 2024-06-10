@@ -57,6 +57,44 @@ const restaurant = {
 };
 
 ///////////////////////////////////////
+// Maps: Fundamentals
+
+const rest = new Map();
+
+
+/*
+///////////////////////////////////////
+// Sets
+
+const ordersSet = new Set([
+  'Pasta', 
+  'Pizza', 
+  'Risotto',
+  'Pizza',
+  'Pasta',
+  'Pizza'
+]);
+
+console.log(ordersSet);
+console.log(new Set('Jonas'));
+console.log(ordersSet.size);
+console.log(ordersSet.has('Pizza'));
+console.log(ordersSet.has('Bread'));
+ordersSet.add('Garlic Bread');
+ordersSet.delete('Risotto');
+console.log(ordersSet);
+
+for (const order of ordersSet) console.log(order);
+
+// Exampe 
+const staff = ['Waiter', 'Chef', 'Manager', 'Chef', 'Waiter'];
+const staffUniqe = [...new Set(staff)];
+console.log(staffUniqe);
+
+console.log(new Set(['Waiter', 'Chef', 'Manager', 'Chef', 'Waiter']).size);
+
+*/
+///////////////////////////////////////
 // Coding Challenge #2
 
 /* 
@@ -121,6 +159,7 @@ const game = {
   },
 };
 
+/*
 // 1. 
   for (const [i, player] of game.scored.entries())
     console.log(`Goal ${i + 1}: ${player}`);
@@ -137,6 +176,7 @@ const game = {
     const teamStrm = team === 'x' ? ' Draw' : `Victory ${game[team]}`;
     console.log(` Odd of ${teamStrm}: ${odd}`);
   }
+*/
 
 /*
 ///////////////////////////////////////
