@@ -17,8 +17,8 @@ const openingHours = {
 };
 
 // Data needed for a later exercise
-const flights =
-  '_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30';
+// const flights =
+//   '_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30';
 
 // Data needed for first part of the section
 const restaurant = {
@@ -56,6 +56,279 @@ const restaurant = {
   }
 };
 
+/*
+///////////////////////////////////////
+// String Methods Practice
+
+const flights =
+  '_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30';
+
+// 🔴 Delayed Departure from FAO to TXL (11h25)
+//              Arrival from BRU to FAO (11h45)
+//   🔴 Delayed Arrival from HEL to FAO (12h05)
+//            Departure from FAO to LIS (12h30)
+
+console.log(flights.split('+'));
+
+const getCode = str => str.slice(0, 3).toUpperCase();
+
+for (const flight of flights.split('+')) {
+  // console.log(flight.split(';'));
+  const [type, from, to , time] = flight.split(';');
+  const output = `${type.startsWith('_Delayed') ? '🔴' : ''}${type.replaceAll('_', ' ')} from ${getCode(from)} to ${getCode(to)} (${time.replace(':', 'h')})`.padStart(45);
+  console.log(output);
+}
+
+*/
+
+/*
+///////////////////////////////////////
+// Working With Strings - Part 3
+
+console.log('a+very+nice+string'.split('+'));
+console.log('Jonas Schmedtmann'.split(' '));
+
+const [firstName, lastName] = 'Jonas Schmedtmann'.split(' ');
+const newName = ['Mr.', firstName, lastName.toUpperCase()].join(' ');
+console.log(newName);
+
+const capitalizeName = function (name) {
+  const names = name.split(' ');
+  const namesUpper = [];
+
+  for ( const n of names) {
+    // namesUpper.push(n[0].toUpperCase() + n.slice(1));
+    namesUpper.push(n.replace(n[0], n[0].toUpperCase()));
+  }
+  console.log(namesUpper.join(' '));
+};
+capitalizeName ('jessica ann smith davis');
+capitalizeName ('jonas schmedtmann');
+
+// padding 
+const message = 'Go to gate 23!';
+console.log(message.padStart(20, '+').padEnd(30, '+'));
+
+const nme = 'Jonas';
+console.log(nme.padStart(10, '*').padEnd(20, '*'));
+
+const maskCreditCard = function(number) {
+  const str = number + '';
+  const last = str.slice(-4);
+  return last.padStart(str.length, '*');
+}
+console.log(maskCreditCard(398721));
+console.log(maskCreditCard(452035023454));
+console.log(maskCreditCard('84534507484514571'));
+
+//Repeat 
+const message2 = 'Bad weather.....All Departus Delayed';
+console.log(message2.repeat(3));
+
+const planeInLine = function(n) {
+  console.log(`There are ${n} planes in line ${'✈'.repeat(n)}`)
+};
+planeInLine(3);
+planeInLine(5);
+planeInLine(7);
+
+*/
+
+/*
+///////////////////////////////////////
+// Working With Strings - Part 2
+
+const airline = 'TAP Air Portugal';
+
+console.log(airline.toUpperCase());
+console.log(airline.toLowerCase());
+
+const passenger = 'jOnAS'; // Jonas
+const passengerLower = passenger.toLowerCase();
+const passengerCorrect = passengerLower[0].toUpperCase() + passengerLower.slice(1) ;
+
+console.log(passengerCorrect);
+
+// Comparing emails
+const email = 'imtiazshakil203@gmil.com';
+const loginEmail = 'IMTIAZSHAKIL203@GMAIL.COM';
+const lowerEmail = loginEmail.toLocaleLowerCase();
+const trimmedEmail = lowerEmail.trim();
+console.log(trimmedEmail);
+
+const normalizedEmail = loginEmail.toLocaleLowerCase().trim();
+console.log(normalizedEmail);
+
+// Replacing
+const priceGB = '298, 97TK';
+const priceUS = priceGB.replace('TK', '$').replace(',', '.');
+console.log(priceUS);
+
+const announcement = 'All pessengers come to boarding door 23. Boarding door 23!';
+
+console.log(announcement.replace('door', 'gate'));
+console.log(announcement.replaceAll('door', 'gate'));
+
+// Booleans
+const plane = 'Airbus A320neo';
+console.log(plane.includes('A320'));
+console.log(plane.includes('Boeing'));
+console.log(plane.startsWith('Air'));
+
+if (plane.startsWith('Airbus') && plane.endsWith('neo')) {
+  console.log('Part of the NEW Airbua family.');
+}
+
+// Practice
+
+const cheekBaggage = function (items) {
+  const baggage = items.toLowerCase();
+  if ( baggage.includes('knif') || baggage.includes('gun')) {
+    console.log('You are not Allowed on board')
+  }else {
+    console.log('Welcome aboard!')
+  }
+};
+cheekBaggage ('I have a laptop, some Food and a poket Knif');
+cheekBaggage ('Socks and camera');
+cheekBaggage ('Got some snacks and a gun for protection');
+*/
+
+/*
+///////////////////////////////////////
+// Working With Strings - Part 1
+const airline = 'TAP Air Portugal';
+const plane = 'A320';
+
+
+console.log(plane[0]);
+console.log(plane[1]);
+console.log(plane[2]);
+console.log(plane[3]);
+console.log('B737'[0]);
+
+console.log(airline.length);
+console.log('B737'.length);
+
+console.log(airline.indexOf('r'));
+console.log(airline.lastIndexOf('r'));
+console.log(airline.indexOf('portugal'));
+
+console.log(airline.slice(4));
+console.log(airline.slice(4, 7));
+
+console.log(airline.slice(0, airline.indexOf(' ')));
+console.log(airline.slice(airline.lastIndexOf(' ') + 1));
+
+console.log(airline.slice(-2));
+console.log(airline.slice(1, -1));
+
+const checkMiddleSeat = function (seat) {
+// B and E are middle seats
+const s = seat.slice(-1);
+if (s === 'B' || s === 'E') console.log ('You got the middle seat ☹');
+else console.log ('You got lucky 😎');
+}
+checkMiddleSeat ('11E');
+checkMiddleSeat ('23C');
+checkMiddleSeat ('3E');
+
+console.log(new String('Jonas'));
+console.log(typeof new String('Jonas'));
+
+console.log(typeof new String('Jonas').slice(1));
+*/
+
+///////////////////////////////////////
+// Coding Challenge #3
+
+/* 
+Let's continue with our football betting app! This time, we have a map with a log of the events that happened during the game. The values are the events themselves, and the keys are the minutes in which each event happened (a football game has 90 minutes plus some extra time).
+
+1. Create an array 'events' of the different game events that happened (no duplicates)
+2. After the game has finished, is was found that the yellow card from minute 64 was unfair. So remove this event from the game events log.
+3. Print the following string to the console: "An event happened, on average, every 9 minutes" (keep in mind that a game has 90 minutes)
+4. Loop over the events and log them to the console, marking whether it's in the first half or second half (after 45 min) of the game, like this:
+      [FIRST HALF] 17: ⚽️ GOAL
+
+GOOD LUCK 😀
+*/
+
+const gameEvents = new Map([
+  [17, '⚽️ GOAL'],
+  [36, '🔁 Substitution'],
+  [47, '⚽️ GOAL'],
+  [61, '🔁 Substitution'],
+  [64, '🔶 Yellow card'],
+  [69, '🔴 Red card'],
+  [70, '🔁 Substitution'],
+  [72, '🔁 Substitution'],
+  [76, '⚽️ GOAL'],
+  [80, '⚽️ GOAL'],
+  [92, '🔶 Yellow card'],
+]);
+
+/*
+// 1.
+const events = [...new Set(gameEvents.values())];
+console.log(events);
+
+// 2.
+gameEvents.delete(64);
+console.log(gameEvents);
+
+// 3.
+console.log(`An event happened, on average, every ${ 90 / gameEvents.size} minutes`);
+
+const time = [...gameEvents.keys()].pop();
+console.log(time);
+console.log(`An event happened, on average, every ${ time / gameEvents.size} minutes`);
+
+// 4.
+for (const [min, events] of gameEvents) {
+  const half = min <= 45 ? 'FIRST' : 'SECOND';
+  console.log(`[${half} HALF] ${min}: ${events}`);
+}
+*/
+
+/*
+///////////////////////////////////////
+// Maps: Iteration
+const question = new Map([
+  ['question', 'What is the best programming language in the world?'],
+  [1, 'C'],
+  [2, 'Java'],
+  [3, 'Javascript'],
+  ['correct', 3],
+  [true, 'Correct🍟🎉'],
+  [false, 'Try again!'],
+]);
+console.log(question);
+
+// Convert object to map
+console.log(Object.entries(openingHours));
+const hoursMap = new Map(Object.entries(openingHours)); 
+console.log(hoursMap);
+
+// Quiz app
+
+console.log(question.get(question));
+for ( const [key, value] of question) {
+  if (typeof key === 'number') console.log (`Answer ${key}: ${value}`);
+}
+
+// const answer = Number(prompt('Your answer'));
+const answer = 3;
+console.log(answer);
+
+ console.log(question.get(question.get('correct') === answer));
+
+ // Convert map to Array
+ console.log([...question]);
+ console.log([...question.keys()]);
+ console.log([...question.values()]);
+*/
+/*
 ///////////////////////////////////////
 // Maps: Fundamentals
 
@@ -87,7 +360,7 @@ rest.set(arr, 'Test');
 rest.set(document.querySelector('h1'), 'Heading');
 console.log(rest.size);
 console.log(rest.get(arr));
-
+*/
 
 /*
 ///////////////////////////////////////
